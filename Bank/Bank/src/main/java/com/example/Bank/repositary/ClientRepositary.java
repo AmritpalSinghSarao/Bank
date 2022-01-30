@@ -39,18 +39,15 @@ public interface ClientRepositary extends JpaRepository<Client,Long> {
 
     // Update new client
     @Modifying
-    @Transactional
-    @Query(value = "UPDATE Client c SET c.email=:email where c.client_id==clientId",nativeQuery = true)
+    @Query(value = "UPDATE Client c SET c.email=:email where c.client_id==:clientId",nativeQuery = true)
     int updateClientByEmail(@Param("email") String email,@Param("clientId")Long clientId);
 
     @Modifying
-    @Transactional
-    @Query(value = "UPDATE Client c SET c.phone=:phone where c.client_id==clientId",nativeQuery = true)
+    @Query(value = "UPDATE Client c SET c.phone=:phone where c.client_id==:clientId",nativeQuery = true)
     int updateClientByPhone(@Param("phone") String email,@Param("clientId")Long clientId);
 
     @Modifying
-    @Transactional
-    @Query(value = "UPDATE Client c SET c.docId=:docId where c.client_id==clientId",nativeQuery = true)
+    @Query(value = "UPDATE Client c SET c.docId=:docId where c.client_id==:clientId",nativeQuery = true)
     int updateClientByDocId(@Param("docId") String docId,@Param("clientId")Long clientId);
 
 }

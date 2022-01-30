@@ -26,22 +26,5 @@ public class ClientAccountController{
     @Autowired
     private TransactionService transactionService;
 
-    @GetMapping("/client/account/{id}/{pageNumber}")
-    public List<Transaction> fetchAllTransactions(@PathVariable("id") Long accountNumber,@PathVariable("pageNumber") int pageNumber)
-    {
-        //return transactionService.fetchAllTransactionByAccount(accountNumber,pageNumber);
-        return null;
-    }
-
-    @GetMapping("/client/account/{accountNumber}")
-    public List<Transaction> fetchAllTransactions(Long accountNumber) {
-        return null;
-    }
-
-    @PostMapping("/client/deposit/{accountNumber}/{amount}")
-    public void depositMoney(@PathVariable("accountNumber") Long accountNumber,@PathVariable("amount") float amount)
-    {
-        //accountService.
-    }
 
 }
