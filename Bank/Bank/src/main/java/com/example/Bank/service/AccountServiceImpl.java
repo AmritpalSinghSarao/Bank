@@ -36,9 +36,9 @@ public class AccountServiceImpl implements AccountService {
         return accountAdd;
     }
 
-    public int deleteAccount(Account account)
+    public int deleteAccount(Long accountNumber)
     {
-        return accountRepositary.deleteByAccountNumber(account.getAccountNumber());
+        return accountRepositary.deleteByAccountNumber(accountNumber);
     }
 
     public Account updateAccountBalance(float balanceToAdd,Long accountNumber)

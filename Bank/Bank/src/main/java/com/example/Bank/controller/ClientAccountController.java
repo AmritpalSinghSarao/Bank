@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-public class ClientAccountController{
+public class ClientAccountController implements InterfaceController{
 
     @Autowired
     private AccountService accountService;

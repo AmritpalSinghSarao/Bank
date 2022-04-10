@@ -12,7 +12,7 @@ public interface AccountService {
 
     public List<Account> fetchAllAccounts();
     public Account saveAccount(Account account, Client client);
-    public int deleteAccount(Account account);
+    public int deleteAccount(Long accountNumber);
     public Account updateAccountBalance(float balanceToAdd,Long accountNumber);
     public Account getAccountById(Long clientId);
 
